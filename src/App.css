@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.sidebar-class{
+  margin-top: 68.5px;
+  background-color: aqua;
+}
