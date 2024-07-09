@@ -63,9 +63,9 @@ export const CustomTabs = ({ tabs, selectedTab, handleRemoveTab }) => {
       {tabs.map((tab, index) => (
         <TabPanel key={tab} value={value} index={index}>
         {tab === 'Dashboard' && (
-          <Grid container spacing={2}>
-            <Grid item xs={6}>
-              <FormControl variant="outlined" fullWidth style={{width:300, marginBottom: '16px', marginRight:60 }}>
+          <>
+          <div style={{ display: 'flex', gap: '16px', marginBottom: '16px' }}>
+              <FormControl variant="outlined" fullWidth style={{width:300 }}>
                 <InputLabel id="asset-status-label-1">Asset Status</InputLabel>
                 <Select
                   labelId="asset-status-label-1"
@@ -94,9 +94,9 @@ export const CustomTabs = ({ tabs, selectedTab, handleRemoveTab }) => {
                   {/* Add your asset options here */}
                 </Select>
               </FormControl>
-            </Grid>
-            <Grid item xs={6}>
-              <FormControl variant="outlined" fullWidth style={{width:300, marginBottom: '16px', marginRight:'60px' }}>
+            
+            
+              <FormControl variant="outlined" fullWidth style={{width:300, marginBottom: '16px'}}>
                 <InputLabel id="asset-status-label-3">Users</InputLabel>
                 <Select
                   labelId="asset-status-label-3"
@@ -105,15 +105,15 @@ export const CustomTabs = ({ tabs, selectedTab, handleRemoveTab }) => {
                   onChange={(e) => setAssetStatus(e.target.value)}
                   label="Select Asset Status"
                 >
-              <MenuItem value="">All users</MenuItem>
-              <MenuItem value="">ankur(Ankur Jain)</MenuItem>
-              <MenuItem value="">ashwini(Ashwini Gaikwad)</MenuItem>
-              <MenuItem value="">harshal(harshal harshal)</MenuItem>
-              <MenuItem value="">Harshal 123 (HARSHAL CREDANCE)</MenuItem>
-              <MenuItem value="">josh(josh JOSH)</MenuItem>
-              <MenuItem value="">vts(CGS Company)</MenuItem>
-              <MenuItem value="">vtsdemo1 (chate global services</MenuItem>
-              <MenuItem value="">wcldemo(wcl wcl)</MenuItem>
+              <MenuItem value="All users">All users</MenuItem>
+              <MenuItem value="ankur(Ankur Jain)">ankur(Ankur Jain)</MenuItem>
+              <MenuItem value="ashwini(Ashwini Gaikwad)">ashwini(Ashwini Gaikwad)</MenuItem>
+              <MenuItem value="harshal(harshal harshal)">harshal(harshal harshal)</MenuItem>
+              <MenuItem value="Harshal 123 (HARSHAL CREDANCE)">Harshal 123 (HARSHAL CREDANCE)</MenuItem>
+              <MenuItem value="josh(josh JOSH)">josh(josh JOSH)</MenuItem>
+              <MenuItem value="vts(CGS Company)">vts(CGS Company)</MenuItem>
+              <MenuItem value="vtsdemo1 (chate global services)">vtsdemo1 (chate global services)</MenuItem>
+              <MenuItem value="wcldemo(wcl wcl)">wcldemo(wcl wcl)</MenuItem>
                   {/* Add your user options here */}
                 </Select>
               </FormControl>
@@ -126,8 +126,8 @@ export const CustomTabs = ({ tabs, selectedTab, handleRemoveTab }) => {
                   onChange={(e) => setAssetStatus(e.target.value)}
                   label="Select Asset Status"
                 >
-                  <MenuItem value="">All Group</MenuItem>
-                  <MenuItem value="">Ankur asset</MenuItem>
+                  <MenuItem value="All Group">All Group</MenuItem>
+                  <MenuItem value="Ankur asset">Ankur asset</MenuItem>
                   {/* Add your group options here */}
                 </Select>
               </FormControl>
@@ -140,9 +140,9 @@ export const CustomTabs = ({ tabs, selectedTab, handleRemoveTab }) => {
                   onChange={(e) => setAssetStatus(e.target.value)}
                   label="Select Asset Status"
                 >
-                <MenuItem value="">All Areas</MenuItem>
-              <MenuItem value="">amanora</MenuItem>
-              <MenuItem value="">Ram Nager</MenuItem>
+                <MenuItem value="All Areas">All Areas</MenuItem>
+              <MenuItem value="amanora">amanora</MenuItem>
+              <MenuItem value="Ram Nager">Ram Nager</MenuItem>
                   {/* Add your area options here */}
                 </Select>
               </FormControl>
@@ -155,17 +155,18 @@ export const CustomTabs = ({ tabs, selectedTab, handleRemoveTab }) => {
                   onChange={(e) => setAssetStatus(e.target.value)}
                   label="Select Asset Status"
                 >
-                <MenuItem value="">All Landmarks</MenuItem>
-              <MenuItem value="">API Corner</MenuItem>
-              <MenuItem value="">LOADING POINT</MenuItem>
-              <MenuItem value="">Shivneri Lawns</MenuItem>
-              <MenuItem value="">UNLOADING POINT</MenuItem>
-              <MenuItem value="">weighing bridge</MenuItem>
-              <MenuItem value="">yashwant nagar</MenuItem>
+                <MenuItem value="All Landmarks">All Landmarks</MenuItem>
+              <MenuItem value="API Corner">API Corner</MenuItem>
+              <MenuItem value="LOADING POINT">LOADING POINT</MenuItem>
+              <MenuItem value="Shivneri Lawns">Shivneri Lawns</MenuItem>
+              <MenuItem value="UNLOADING POINT">UNLOADING POINT</MenuItem>
+              <MenuItem value="weighing bridge">weighing bridge</MenuItem>
+              <MenuItem value="yashwant nagar">yashwant nagar</MenuItem>
                   {/* Add your landmark options here */}
                 </Select>
-              </FormControl>
-              <FormControl variant="outlined" fullWidth style={{ width:'300px', marginBottom: '16px',alignItems:'right' }}>
+              </FormControl></div><br/>
+              <div style={{display:'flex', justifyContent:'right'}}>
+              <FormControl variant="outlined" fullWidth style={{ width:'300px', marginBottom: '16px' }}>
                 <InputLabel id="asset-status-label-6">Select Vehicles</InputLabel>
                 <Select
                   labelId="asset-status-label-6"
@@ -174,21 +175,21 @@ export const CustomTabs = ({ tabs, selectedTab, handleRemoveTab }) => {
                   onChange={(e) => setAssetStatus(e.target.value)}
                   label="Select Asset Status"
                 >
-                <MenuItem value="">MH40BL3039-BESA</MenuItem>
-              <MenuItem value="">MH40AT0461-HANSA</MenuItem>
-              <MenuItem value="">MH04CU9077</MenuItem>
-              <MenuItem value="">MH34BG5552</MenuItem>
-              <MenuItem value="">MH31FC2330</MenuItem>
-              <MenuItem value="">MH31FC1100</MenuItem>
-              <MenuItem value="">MH31-EQ0455</MenuItem>
-              <MenuItem value="">Mixer</MenuItem>
-              <MenuItem value="">MH29M8497-HANSA</MenuItem>
+                <MenuItem value="MH40BL3039-BESA">MH40BL3039-BESA</MenuItem>
+              <MenuItem value="MH40AT0461-HANSA">MH40AT0461-HANSA</MenuItem>
+              <MenuItem value="MH04CU9077">MH04CU9077</MenuItem>
+              <MenuItem value="MH34BG5552">MH34BG5552</MenuItem>
+              <MenuItem value="MH31FC2330">MH31FC2330</MenuItem>
+              <MenuItem value="MH31FC1100">MH31FC1100</MenuItem>
+              <MenuItem value="MH31-EQ0455">MH31-EQ0455</MenuItem>
+              <MenuItem value="Mixer">Mixer</MenuItem>
+              <MenuItem value="MH29M8497-HANSA">MH29M8497-HANSA</MenuItem>
 
                   {/* Add your landmark options here */}
                 </Select>
               </FormControl>
-            </Grid>
-          </Grid>
+              </div>
+            </>
         )}
       </TabPanel>
       ))}

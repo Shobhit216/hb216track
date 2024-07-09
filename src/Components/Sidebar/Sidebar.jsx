@@ -15,6 +15,7 @@ export const Sidebar = ({ propFunc, propArr, propBoolFunc, propBoolIn, onItemCli
   const [open, setOpen] = useState(false);
   const [filterText, setFilterText] = useState('');
   const [filteredItems, setFilteredItems] = useState(propArr);
+  const [clickedButton, setClickedButton] = useState(null);
 
   const navigate = useNavigate();
 
@@ -34,13 +35,14 @@ export const Sidebar = ({ propFunc, propArr, propBoolFunc, propBoolIn, onItemCli
   };
 
   if (open === true) {
-    propFunc(260);
+    propFunc(210);
   } else {
     propFunc(0);
   }
 
   const handleClick = (text) => {
     onItemClick(text);
+    setClickedButton(text);
     // if(text==='Analytics Dashboard') {
     //   navigate('/Analytics')
     // }
@@ -48,10 +50,10 @@ export const Sidebar = ({ propFunc, propArr, propBoolFunc, propBoolIn, onItemCli
   };
 
   const DrawerList = (
-    <Box sx={{ width: 250, backgroundColor: '#2c3e50', marginTop: 8, color: 'white' }} role="presentation">
+    <Box sx={{ width: 200, height:'3000px', backgroundColor: '#2c3e50', marginTop: 8, color: 'white' }} role="presentation">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px' }}>
         <Typography variant="h6" sx={{ color: 'white' }}>
-          Hbtrack
+          
         </Typography>
         <IconButton onClick={handleSideBarClose} sx={{ color: 'white' }}>
           <CloseIcon />
@@ -66,11 +68,15 @@ export const Sidebar = ({ propFunc, propArr, propBoolFunc, propBoolIn, onItemCli
         placeholder="Filter items"
         value={filterText}
         onChange={(e) => setFilterText(e.target.value)}
-        sx={{ backgroundColor: 'rgba(255, 255, 255, 0.2)', borderRadius: 1, margin: '10px', width:'90%' }}
+        sx={{ backgroundColor: 'rgba(255, 255, 255, 0.2)', borderRadius: 1, margin: '0 10px 10px 10px', width:'90%' }}
       />
         {filteredItems.map((text) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton onClick={() => handleClick(text)} sx={{ color: 'white' }}>
+            <ListItemButton onClick={() => handleClick(text)} sx={{ color: 'white', 
+            backgroundColor: clickedButton === text ? 'rgba(255, 255, 255, 0.2)' : 'initial',
+            '&:hover': {
+              backgroundColor: clickedButton === text ? 'rgba(255, 255, 255, 0.2)' : 'grey',
+            } }}>
               <ListItemText primary={text} primaryTypographyProps={{ style: { color: 'white' } }} />
             </ListItemButton>
           </ListItem>

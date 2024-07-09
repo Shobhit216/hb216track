@@ -7,7 +7,7 @@ import App from "./App";
 import { Login } from "./Components/Login";
 import { Signup } from "./Components/Signup";
 import { ChangePassword } from "./Components/ChangePassword";
-import { SettingsComp } from "./Components/VariousTables/Settings/Settings";
+// import { SettingsComp } from "./Components/VariousTables/Maintenance/Settings";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -23,7 +23,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/Login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/ChangePassword" element={<ChangePassword />} />
-        <Route path="/Settings" element={<SettingsComp />} />
+        {/* <Route path="/Settings" element={<SettingsComp />} /> */}
         {/* <Route path="/Analytics" element={<AnalyticsDashboard />} /> */}
           
       </Routes>

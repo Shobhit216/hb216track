@@ -100,7 +100,7 @@ export const RedAlertZone = () => {
                       style={{
                         minWidth: column.minWidth,
                         borderRight: '1px solid #ddd',
-                        backgroundColor: '#1976d2',
+                        backgroundColor: '#2c3e50',
                         color: 'white',
                       }}
                     >

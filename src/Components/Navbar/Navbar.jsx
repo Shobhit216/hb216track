@@ -34,8 +34,8 @@ import {Link} from 'react-router-dom';
 const pages = [
   { title: 'Home', icon: <HomeIcon />, arr: ['Dashboard', 'Advanced Dashboard', 'Analytics Dashboard'] },
   { title: 'Master', icon: <DriveEtaIcon />, arr: ['Assets', 'Assets Type','Assets Command','Assets Category','Assets Class','Assets Group','Users','Assets URL','User Profile','Users Assets Mapping','User Menu Master','Import Location','Assets Division','Assets Owner','Driver Master','Over speed setting','Device Settings','Geo Data', 'Landmark Group','Commands','Top Main Menu Master','Import Trip','Top Menu Master','Broker','Address Book','Main Menu Master','Address Book Group','User Display Settings','RFID','Telecom Master','Landmark Images','Landmark Waypoints','Emails'] },
-  { title: 'Geofence', icon: <DriveEtaIcon />, arr: ['Create Landmark', 'Edit Landmarks','Create Route','Edit Routes','Create Area','Edit Areas','Create Area','Edit Areas','Create Zone','Edit Zones','Trips'] },
-  { title: 'Reports', icon: <BarChartIcon />, arr: ['Summary', 'Stop Report', 'Area In/Out Report', 'Area Report', 'Landmark Distance', 'Landmark Report', 'Location Wise Distance', 'Distance Report', 'Run Report', 'Distance Graph', 'Speed Graph', 'Trip Report','Trip Report', 'All Point Report','RFID','Distance Between Report','Vehicle Average','Alerts','Data Logs','AC Report', 'Petrolling Report','Bin Details Report','ETA details report','ETA details'] },
+  { title: 'Geofencing', icon: <DriveEtaIcon />, arr: ['Create Landmark', 'Edit Landmarks','Create Route','Edit Routes','Create Area','Edit Areas','Create Zone','Edit Zones','Trips'] },
+  { title: 'Reports', icon: <BarChartIcon />, arr: ['Summary', 'Stop Report', 'Area In/Out Report', 'Area Report', 'Landmark Distance', 'Landmark Report', 'Location Wise Distance', 'Distance Report', 'Run Report', 'Distance Graph', 'Speed Graph', 'Trip Report', 'All Point Report','RFID','Distance Between Report','Vehicle Average','Alerts','Data Logs','AC Report', 'Petrolling Report','Bin Details Report','ETA details report','ETA details'] },
   { title: 'Maintenance', icon: <SettingsIcon />, arr: ['Search','Add maintenance','Type of operation','Custom Profile'] },
 ];
 
@@ -79,9 +79,9 @@ export const Navbar = (props) => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link to={'/'}>
-          <img src='https://crtrack.credencetracker.com/gps/resources/img/logos/inner/logo-hbtrack.png' style={{ height: 40, width: 40 }} /></Link>
+          <img src='CompanyLogo.png' style={{ height: 40, width: 150 }} /></Link><br/>
           <Typography variant="h6" sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, marginLeft: '5px' }}>
-            Hbtrack
+            
           </Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
             {pages.map((page) => (
